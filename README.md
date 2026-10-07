@@ -2,7 +2,7 @@
 
 ## 1. Business Name & Description
 * **Business Name:** Chair We GO!
-* **Description:** Chair We GO! is a specialized event rental business based in Morong, Rizal, providing high-quality monoblock chairs, round folding tables, and rectangular banquet tables for special occasions, parties, and gatherings. 
+* **Description:** Chair We GO! is a specialized event rental business providing high-quality monoblock chairs, round folding tables, and rectangular banquet tables for special occasions, parties, and gatherings. 
 * **Target Users:** 
   * **Customers / Renters:** Individuals or event organizers looking to rent durable event seating and tables with transparent pricing, delivery management, and instant booking receipts.
   * **Business Owners / Administrators:** Store operators who need to manage inventory stock levels, monitor delivery logistics, track customer reservation history, and oversee a scheduling calendar.
@@ -13,7 +13,7 @@
 Before implementing this digital solution, event rental businesses typically faced several operational hurdles:
 * **Double-Bookings & Stock Conflicts:** Manually tracking chair and table availability across multiple overlapping event dates often led to overbooking.
 * **Lack of Advance Notice & Unreliable Bookings:** Last-minute "change-of-mind" bookings created logistical stress and preparation delays.
-* **Ambiguous Delivery & Downpayment Terms:** Miscommunication regarding delivery distance fees outside Morong and unconfirmed downpayments caused lost revenue.
+* **Ambiguous Delivery & Downpayment Terms:** Miscommunication regarding delivery distance fees and unconfirmed downpayments caused lost revenue.
 * **Manual Record-Keeping:** Relying on paper ledgers or disorganized messaging apps for customer history, inventory tracking, and schedule validation.
 
 **Chair We GO!** solves these problems by providing an automated, web-based platform with a mandatory 4-day advance booking window, dynamic distance-based delivery calculations, automatic 3-day downpayment tracking, and a centralized admin calendar.
