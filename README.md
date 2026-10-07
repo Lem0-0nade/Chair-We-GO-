@@ -27,7 +27,7 @@ Before implementing this digital solution, event rental businesses typically fac
 * **Advanced Reservation Cart:** 
   * Real-time subtotal calculation.
   * Combined direct number inputs and traditional `+` / `-` quantity buttons.
-  * Venue address input and a Morong distance dropdown (+₱300 delivery fee if outside a 5km radius).
+  * Venue address input and distance dropdown (+₱300 delivery fee if outside a 5km radius).
 * **Professional Lead-Time Calendar Validation:** Restricts event booking dates to a minimum of **4 days in advance** from the current date to ensure adequate preparation time.
 * **Policy Agreement & Automated Receipts:** Enforces a 50% downpayment policy within a 3-day window and generates printable/downloadable text receipts.
 * **Comprehensive Admin CRUD Dashboard:**
