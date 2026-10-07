@@ -1,52 +1,46 @@
 # Chair We GO! - Premium Event Rentals Web Application
 
-**Chair We GO!** is a full-featured, responsive cloud web application built for event rental businesses. It streamlines inventory management, client authentication, event scheduling, dynamic logistics calculation, online/cash payments, and real-time client-admin support chat.
+Business Overview
+* **Business Name:** Chair We GO!
+* **Business Description:** Chair We GO! is a premier event rental service provider specializing in high-quality seating (monoblock chairs with optional fitted covers) and banquet/buffet tables. 
+* **Target Users:** 
+  * **Clients / Event Organizers:** Individuals or planners looking to reserve seating and tables for weddings, parties, corporate events, or private gatherings.
+  * **Administrators:** Business owners/managers who oversee inventory capacities, track bookings on a live calendar, review client records, update payment statuses, and provide customer support.
 
----
+Problem Being Solved
+Traditional event equipment rentals often rely on manual spreadsheets, phone calls, or disjointed messaging apps to handle reservations, leading to double-booking errors, stock discrepancies, and delayed payment verifications. **Chair We GO!** solves this by providing an automated, real-time cloud concierge portal that locks inventory capacities instantly, prevents scheduling conflicts, calculates logistics (pick-up vs. delivery) dynamically, and unifies client-admin communication with image attachment support for proof-of-payment verification.
 
-## 🚀 Key Features
-
-* **Cloud-Synced Real-Time Database**: Powered by **Firebase Realtime Database**, allowing instant synchronization of inventory, bookings, user records, and chat messages across multiple devices and browsers.
-* **Responsive Mobile & Desktop Web UI**: Fully optimized layout using advanced CSS media queries to ensure seamless viewing and usage on smartphones, tablets, and desktop computers.
-* **Secure Client Authentication**:
-  * Registration requires full name, email address, and a securely hashed password (SHA-256).
-  * Flexible login supporting either **Email Address** or **Full Name**.
-  * Hardcoded admin credentials removed from public views for enhanced security.
-* **Interactive Event Rental Catalog**:
-  * Real-time inventory tracking and stock counts.
-  * Optional customized event additions (e.g., adding elegant fitted chair covers with dynamic pricing).
+Feature List
+* **Landing Page & Navigation**: Professional, artistic hero landing section with clear calls to action ("Reserve Now" and "Client Log In").
+* **Authentication System**: 
+  * User registration capturing Full Name, Email Address, and securely hashed passwords.
+  * Flexible login using either **Email Address** or **Full Name**.
+  * Secure session management and logout.
+* **Role-Based Access Control**: Strict separation between Admin and regular User roles.
+* **Complete CRUD Operations**:
+  * **Create**: Register accounts, add new inventory stock capacities, and submit event reservations.
+  * **Read**: Browse rental product catalogs, view client event histories, check event calendar schedules, and access chat support histories.
+  * **Update**: Adjust cart item quantities, update stock inventory levels, and modify reservation payment statuses (e.g., marking payments as "Paid").
+  * **Delete**: Remove items from cart or terminate/cancel event bookings (which automatically restores and frees up global inventory capacities).
+* **Validations & Confirmations**: 
   * 4-day lead-time enforcement on reservation dates.
-* **Flexible Logistics & Pricing**:
-  * Choose between **Store Pick-up (₱0)** or **Direct-to-Venue Delivery (₱300)** with required address validation.
-* **Dual Payment Modes & Online Verification**:
-  * **Cash**: Pay upon pick-up or delivery.
-  * **Online Payment**: Features an integrated InstaPay QR code displayed securely on the confirmation receipt *after* verification.
-* **Proof of Payment Chat Attachments**:
-  * Real-time chat widget enabling direct communication between clients and the admin.
-  * Built-in camera/file upload button allowing clients to attach and send payment screenshots directly into the chat stream.
-* **Interactive Event Calendar & Admin Dashboard**:
-  * Monthly interactive event calendar tracking bookings and capacities.
-  * Admin tools to update stock, monitor client histories, verify payment statuses, and terminate or manage bookings.
-* **Digital Invoicing & Printing**: Generate, print, or download text-based formal invoices with full client details, item breakdowns, and billing totals.
+  * Real-time stock availability validation against global database records.
+  * Confirmation dialogs before terminating reservations.
+* **Flexible Logistics & Payments**: 
+  * Selection between Store Pick-up (₱0) and Direct Delivery (₱300 with required address validation).
+  * Choice of Cash payment or Online Payment via an integrated InstaPay QR code (revealed securely upon order confirmation).
+* **Real-Time Client-Admin Support Chat & Attachments**: 
+  * Live messaging widget with unread notifications.
+  * Camera/file upload integration allowing clients to upload and transmit proof-of-payment screenshots directly to the admin.
 
----
+Tech Stack Used
+* **Frontend**: HTML5, CSS3 (Flexbox, CSS Grid, Custom Variables, Responsive Media Queries), Vanilla JavaScript (ES6+ Modules).
+* **Database & Cloud Sync**: Firebase Realtime Database (Google Cloud).
+* **Security**: Web Crypto API (SHA-256 Client-Side Password Hashing).
 
-## 🛠️ Technology Stack
+Setup and Run Instructions (Tested on Clean Machine)
 
-* **Frontend**: HTML5, CSS3 (Custom Grid, Flexbox, Variables, Media Queries), Vanilla JavaScript (ES Modules).
-* **Backend & Database**: Firebase Realtime Database (Google Cloud).
-* **Security**: Web Crypto API (SHA-256 Hashing for passwords).
-
----
-
-## ⚙️ Setup & Installation
-
-1. **Clone or Download Files**: Ensure you have your `index.html` and the `images/` folder (containing your catalog images and `image_2b1985.png` InstaPay QR code) in your root directory.
-2. **Firebase Configuration**: The project is pre-configured with a Firebase Realtime Database endpoint. Ensure your Firebase Database rules allow read/write access for testing:
-   ```json
-   {
-     "rules": {
-       ".read": "true",
-       ".write": "true"
-     }
-   }
+1. **Clone the Repository**:
+   ```bash
+   git clone <your-repository-link>
+   cd <repository-folder>
