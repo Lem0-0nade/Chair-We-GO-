@@ -1,90 +1,52 @@
-# Chair We GO! - Premium Event Rentals Management System
+# Chair We GO! - Premium Event Rentals Web Application
 
-## 1. Business Name & Description
-* **Business Name:** Chair We GO!
-* **Description:** Chair We GO! is a specialized event rental business providing high-quality monoblock chairs, round folding tables, and rectangular banquet tables for special occasions, parties, and gatherings. 
-* **Target Users:** 
-  * **Customers / Renters:** Individuals or event organizers looking to rent durable event seating and tables with transparent pricing, delivery management, and instant booking receipts.
-  * **Business Owners / Administrators:** Store operators who need to manage inventory stock levels, monitor delivery logistics, track customer reservation history, and oversee a scheduling calendar.
+**Chair We GO!** is a full-featured, responsive cloud web application built for event rental businesses. It streamlines inventory management, client authentication, event scheduling, dynamic logistics calculation, online/cash payments, and real-time client-admin support chat.
 
 ---
 
-## 2. Problem Being Solved
-Before implementing this digital solution, event rental businesses typically faced several operational hurdles:
-* **Double-Bookings & Stock Conflicts:** Manually tracking chair and table availability across multiple overlapping event dates often led to overbooking.
-* **Lack of Advance Notice & Unreliable Bookings:** Last-minute "change-of-mind" bookings created logistical stress and preparation delays.
-* **Ambiguous Delivery & Downpayment Terms:** Miscommunication regarding delivery distance fees and unconfirmed downpayments caused lost revenue.
-* **Manual Record-Keeping:** Relying on paper ledgers or disorganized messaging apps for customer history, inventory tracking, and schedule validation.
+## 🚀 Key Features
 
-**Chair We GO!** solves these problems by providing an automated, web-based platform with a mandatory 4-day advance booking window, dynamic distance-based delivery calculations, automatic 3-day downpayment tracking, and a centralized admin calendar.
-
----
-
-## 3. Feature List
-* **Public Landing Page:** A welcoming interface introducing the business value proposition, highlighting core features (Premium Quality, Fast Delivery, Easy Booking), and offering direct paths to log in or sign up.
-* **User Authentication & Authorization:** Secure user registration and login system with persistent account memory (`localStorage`), featuring role-based redirection separating normal renters from store administrators.
-* **Interactive Rental Catalog:** Displays item cards featuring high-resolution images, description cards with hover-zoom previews, and maximum stock limit visibility.
-* **Advanced Reservation Cart:** 
-  * Real-time subtotal calculation.
-  * Combined direct number inputs and traditional `+` / `-` quantity buttons.
-  * Venue address input and distance dropdown (+₱300 delivery fee if outside a 5km radius).
-* **Professional Lead-Time Calendar Validation:** Restricts event booking dates to a minimum of **4 days in advance** from the current date to ensure adequate preparation time.
-* **Policy Agreement & Automated Receipts:** Enforces a 50% downpayment policy within a 3-day window and generates printable/downloadable text receipts.
-* **Comprehensive Admin CRUD Dashboard:**
-  * **Inventory Management:** View real-time item capacities and dynamically update stock totals.
-  * **Renter History Tracker:** View aggregate reservation counts and item breakdown history per customer.
-  * **Interactive Schedule Calendar:** Visualizes daily bookings with status badges (*"Pending Downpayment"* vs. *"Paid"*), allowing administrators to mark payments or terminate/cancel unfulfilled bookings to automatically restore inventory stock.
-
----
-
-## 4. Tech Stack Used
-* **Frontend Structure:** HTML5 (Semantic markup, responsive grid layouts).
-* **Styling & Presentation:** CSS3 (Custom CSS Variables, modern flexbox/grid alignments, smooth transition animations, and `@media` print stylesheet support).
-* **Client-Side Logic & State Persistence:** Vanilla JavaScript (ES6+), utilizing browser `localStorage` to ensure data persists across page reloads and browser restarts without requiring an external backend database.
-* **Hosting & Deployment:** Netlify (Static site drag-and-drop deployment).
+* **Cloud-Synced Real-Time Database**: Powered by **Firebase Realtime Database**, allowing instant synchronization of inventory, bookings, user records, and chat messages across multiple devices and browsers.
+* **Responsive Mobile & Desktop Web UI**: Fully optimized layout using advanced CSS media queries to ensure seamless viewing and usage on smartphones, tablets, and desktop computers.
+* **Secure Client Authentication**:
+  * Registration requires full name, email address, and a securely hashed password (SHA-256).
+  * Flexible login supporting either **Email Address** or **Full Name**.
+  * Hardcoded admin credentials removed from public views for enhanced security.
+* **Interactive Event Rental Catalog**:
+  * Real-time inventory tracking and stock counts.
+  * Optional customized event additions (e.g., adding elegant fitted chair covers with dynamic pricing).
+  * 4-day lead-time enforcement on reservation dates.
+* **Flexible Logistics & Pricing**:
+  * Choose between **Store Pick-up (₱0)** or **Direct-to-Venue Delivery (₱300)** with required address validation.
+* **Dual Payment Modes & Online Verification**:
+  * **Cash**: Pay upon pick-up or delivery.
+  * **Online Payment**: Features an integrated InstaPay QR code displayed securely on the confirmation receipt *after* verification.
+* **Proof of Payment Chat Attachments**:
+  * Real-time chat widget enabling direct communication between clients and the admin.
+  * Built-in camera/file upload button allowing clients to attach and send payment screenshots directly into the chat stream.
+* **Interactive Event Calendar & Admin Dashboard**:
+  * Monthly interactive event calendar tracking bookings and capacities.
+  * Admin tools to update stock, monitor client histories, verify payment statuses, and terminate or manage bookings.
+* **Digital Invoicing & Printing**: Generate, print, or download text-based formal invoices with full client details, item breakdowns, and billing totals.
 
 ---
 
-## 5. Setup and Run Instructions (Tested from a Clean Machine)
-Follow these steps to run the application locally or deploy it on a clean machine:
+## 🛠️ Technology Stack
 
-1. **Prepare the Project Directory:**
-   Create a new folder on your computer named `chair-we-go`.
-2. **Organize Assets:**
-   Inside the `chair-we-go` folder, create a subfolder named `images`. Place your three item pictures inside this folder with these exact filenames:
-   * `monoblock.jpg`
-   * `round-table.jpg`
-   * `rect-table.jpg`
-3. **Add Application Code:**
-   Save your complete HTML/JS application file into the root of the folder and name it **`index.html`**.
-4. **Add Documentation:**
-   Save this file as **`README.md`** inside the root folder.
-5. **Run Locally:**
-   * Double-click `index.html` to open it directly in any modern web browser (Google Chrome, Firefox, Microsoft Edge, Safari).
-   * *Optional (Recommended for local web testing):* Open the folder in a code editor like Visual Studio Code and use the **Live Server** extension.
+* **Frontend**: HTML5, CSS3 (Custom Grid, Flexbox, Variables, Media Queries), Vanilla JavaScript (ES Modules).
+* **Backend & Database**: Firebase Realtime Database (Google Cloud).
+* **Security**: Web Crypto API (SHA-256 Hashing for passwords).
 
 ---
 
-## 6. AI Tools Used & Purpose
-* **AI Tool Utilized:** Gemini (Google AI Assistant)
-* **Purpose & Contributions:**
-  * **Full-Stack Application Development:** Assisted in architecting, writing, and iterating the single-file HTML/CSS/JavaScript application structure.
-  * **Feature Integration:** Programmed complex business logic including the 4-day minimum lead-time restriction, distance-based delivery fee calculations (5km Morong radius rule), 3-day downpayment tracking, and interactive cart controls.
-  * **Data Persistence Layer:** Configured `localStorage` handlers to seamlessly save user accounts, item inventories, and calendar schedules locally.
-  * **UI/UX Enhancement:** Designed responsive cards with hover-zoom micro-interactions and sliding description reveals, alongside a professional landing page.
-  * **Documentation:** Compiled technical deployment instructions and this structured project `README.md`.
+## ⚙️ Setup & Installation
 
----
-
-## 7. Test Accounts & Sample Credentials
-You can use the following default credentials to test both administrative and customer privileges immediately upon launching the system:
-
-### Administrator Account
-* **Role:** Store Manager / Admin Dashboard Access
-* **Username:** `admin`
-* **Password:** `admin`
-
-### Sample Customer Account
-* **Role:** Renter / Catalog & Cart Access
-* **Username:** `Jane Doe` *(Or register a brand new account using the Sign Up page)*
-* **Password:** `password123`
+1. **Clone or Download Files**: Ensure you have your `index.html` and the `images/` folder (containing your catalog images and `image_2b1985.png` InstaPay QR code) in your root directory.
+2. **Firebase Configuration**: The project is pre-configured with a Firebase Realtime Database endpoint. Ensure your Firebase Database rules allow read/write access for testing:
+   ```json
+   {
+     "rules": {
+       ".read": "true",
+       ".write": "true"
+     }
+   }
