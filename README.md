@@ -1,8 +1,8 @@
-# Chair We GO! - Premium Event Rentals Web Application
+# Premium Event Chair and Table Rentals Web 
 
 Business Overview
 * **Business Name:** Chair We GO!
-* **Business Description:** Chair We GO! is a premier event rental service provider specializing in high-quality seating (monoblock chairs with optional fitted covers) and banquet/buffet tables. 
+* **Description:** Chair We GO! is a premier event rental service provider specializing in high-quality seating (monoblock chairs with optional fitted covers) and banquet/buffet tables. 
 * **Target Users:** 
   * **Clients / Event Organizers:** Individuals or planners looking to reserve seating and tables for weddings, parties, corporate events, or private gatherings.
   * **Administrators:** Business owners/managers who oversee inventory capacities, track bookings on a live calendar, review client records, update payment statuses, and provide customer support.
@@ -23,7 +23,7 @@ Feature List
   * **Update**: Adjust cart item quantities, update stock inventory levels, and modify reservation payment statuses (e.g., marking payments as "Paid").
   * **Delete**: Remove items from cart or terminate/cancel event bookings (which automatically restores and frees up global inventory capacities).
 * **Validations & Confirmations**: 
-  * 4-day lead-time enforcement on reservation dates.
+  * 12-hours lead-time enforcement on reservation dates.
   * Real-time stock availability validation against global database records.
   * Confirmation dialogs before terminating reservations.
 * **Flexible Logistics & Payments**: 
