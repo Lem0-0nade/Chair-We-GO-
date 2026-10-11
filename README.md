@@ -14,7 +14,6 @@ Feature List
 * **Landing Page & Navigation**: Professional, artistic hero landing section with clear calls to action ("Reserve Now" and "Client Log In").
 * **Authentication System**: 
   * User registration capturing Full Name, Email Address, and securely hashed passwords.
-  * Flexible login using either **Email Address** or **User Name**.
   * Secure session management and logout.
 * **Role-Based Access Control**: Strict separation between Admin and regular User roles.
 * **Complete CRUD Operations**:
