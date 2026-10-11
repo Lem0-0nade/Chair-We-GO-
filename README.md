@@ -14,7 +14,7 @@ Feature List
 * **Landing Page & Navigation**: Professional, artistic hero landing section with clear calls to action ("Reserve Now" and "Client Log In").
 * **Authentication System**: 
   * User registration capturing Full Name, Email Address, and securely hashed passwords.
-  * Flexible login using either **Email Address** or **Full Name**.
+  * Flexible login using either **Email Address** or **User Name**.
   * Secure session management and logout.
 * **Role-Based Access Control**: Strict separation between Admin and regular User roles.
 * **Complete CRUD Operations**:
@@ -37,10 +37,3 @@ Tech Stack Used
 * **Frontend**: HTML5, CSS3 (Flexbox, CSS Grid, Custom Variables, Responsive Media Queries), Vanilla JavaScript (ES6+ Modules).
 * **Database & Cloud Sync**: Firebase Realtime Database (Google Cloud).
 * **Security**: Web Crypto API (SHA-256 Client-Side Password Hashing).
-
-Setup and Run Instructions (Tested on Clean Machine)
-
-1. **Clone the Repository**:
-   ```bash
-   git clone <your-repository-link>
-   cd <repository-folder>
